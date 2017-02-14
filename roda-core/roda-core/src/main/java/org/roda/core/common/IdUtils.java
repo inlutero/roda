@@ -160,6 +160,10 @@ public final class IdUtils {
         .toString());
   }
 
+  public static String getPreservationFileId(String fileId) {
+    return URNUtils.createRodaPreservationURN(PreservationMetadataType.FILE, fileId);
+  }
+
   public static PreservationMetadataType getPreservationTypeFromId(String id) {
     return URNUtils.getPreservationMetadataTypeFromId(id);
   }
